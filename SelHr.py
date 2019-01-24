@@ -28,7 +28,7 @@ def getCode(subID, uname):
 	jdata = json.loads(driver.find_element_by_id("json").text)
 	curr = jdata['model']	
 	slug = curr['slug']
-	print(['code'], file=open(slug+'/'+uname+'.cpp', "w"))
+	print(curr['code'], file=open(slug+'/'+uname+'.c', "w"))
 	# exctract JSON HERE. jdata['code'] will have the actual code
 
 
